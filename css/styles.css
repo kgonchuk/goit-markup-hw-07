@@ -131,7 +131,7 @@ margin-left: auto;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 80px 0 80px 40px;
+  padding: 80px 0 0 40px;
   background-color: var(--white-texcolor);
   z-index: 999;
   transform: translateX(100%);

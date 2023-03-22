@@ -118,11 +118,7 @@ margin-left: auto;
     width:1200px;
   } 
 }
-/* -----Header----- */
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-}
+
 .menu-container {
   display:flex;
   flex-direction: column;
@@ -155,7 +151,6 @@ margin-left: auto;
   padding: 0;
   margin: 0;
   list-style: none;
-  /* margin-bottom: 284px; */
 }
 
 .mobile-menu-link {
@@ -240,6 +235,7 @@ display: block;
   border: none;
   border-radius: 50%;
   outline: none;
+  fill: var(--dark);
   background-color: #E7E9FC;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -283,6 +279,182 @@ align-items: center;
   text-transform: uppercase;
   color: var(--primary-brand);
 }
+
+.header-contant{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+.header-logo-web {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-brand);
+}
+/* HERO------MOBILE-------------- */
+.hero-title {
+  background-color: var(--dark);
+  text-align: center;
+  padding-top: 112px;
+  padding-bottom: 112px;
+  
+}
+.hero-item {
+  max-width: 320px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 72px;
+  color: var(--white-texcolor);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  
+}
+.hero-title{
+  max-width: 767px;
+   height:432x;
+   margin-left: auto;
+   margin-right: auto;
+   
+   background-repeat: no-repeat;
+   background-position: center ;
+   background-size: cover;
+ background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7) ), url(../images/bg-mobile.jpg);
+ }
+ .button {
+  font-family: inherit;
+  color: var(--accent);
+  background-color: var(--primary-brand);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  padding: 16px 32px 16px 32px;
+  display: inline;
+  min-width: 169px ;
+  min-height:56px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button:hover,
+.button:focus {
+  color: var(--accent);
+  background-color: var(--button-active);
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 480px),
+screen and (min-resolution: 192dpi) and (min-width: 480px),
+screen and (min-resolution: 2dppx) and (min-width: 480px){
+.hero-title{
+  background-image:linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7) ), url(../images/bg-mobile@2x.jpg);
+}
+}
+/* ---------PRINCIPLE-MOBILE------------- */
+.principle {
+  padding: 96px 0 96px;
+}
+.principle-title {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  color: var(--dark);
+}
+.desc {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  font-weight: 500; 
+  margin-bottom: 72px;
+}
+.principle-list{
+  display: block;
+}
+/* --------OUR TEAM-------MOBILE ----*/
+.team {
+  padding-bottom: 96px;
+  padding-top: 96px;
+  background-color: var(--light);
+}
+.name {
+color: var(--text);
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.position {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-align: center;
+}
+.team-item{
+  margin-bottom: 72px;
+  width: 260px;
+  padding: 32px 0;
+  background-color: var(--white-texcolor);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+border-radius: 0px 0px 4px 4px;
+/* flex-basis: calc((100% - 72px) / 4); */
+}
+.team-caption {
+  text-align: center;
+  margin-bottom: 72px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+}
+.team-list-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.team-link-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: var(--primary-brand);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  } 
+.social-team-icon{
+  fill: var(--primary-brand);
+}
+
+.team-link-icon:hover,
+.team-link-icon:focus{
+  background-color: var(--button-active);
+} 
+
 @media screen and (min-width :768px) {
   .menu-toggle-open{
     display: none;
@@ -299,22 +471,10 @@ align-items: center;
   display: none;
 }
 }
-.header-contant{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px 0;
-}
-.header-logo-web {
-  font-family: "Raleway";
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.33;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--primary-brand);
-}
-@media screen and (min-width: 767px) {
+
+
+
+@media screen and (min-width: 768px) {
   .header-list{
     display: flex;
     gap: 40px;
@@ -381,6 +541,61 @@ align-items: center;
     width: 100%;
     transform: translate(0, 0);
   }
+  /* ----------HERO-----tablet-------- */
+  .hero-title {
+    padding-top: 111px;
+    padding-bottom: 108px;
+  }
+  .hero-title{
+    max-width: 1199px;
+     height: 436px;
+     background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7) ), url(../images/bg-tablet.jpg);
+}
+.hero-item {
+  max-width: 496px;
+  margin-bottom: 40px;
+  font-size: 56px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+/* ----------PRINCIPLE-----TABLET-------- */
+.principle-title {
+  margin-bottom: 8px;
+  text-align: left;
+}
+.principle-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px 24px;
+  
+}
+.principle-item{
+  max-width: 330px;
+}
+/* --------OUR TEAM TABLET------ */
+.team {
+  padding-bottom: 104px;
+  padding-top: 104px;
+}
+.team-item{
+width: 264px;
+}
+.team-list{
+  gap: 64px 24px;
+}
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px){
+.hero-title{
+  background-image:linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7) ), url(../images/bg-tablet@2x.jpg);
+}
+}
+  
+@media screen and (max-width: 1199px) {
+  .work{
+    display: none;
+  }
 }
 @media screen and (min-width: 1200px) {
 
@@ -401,203 +616,26 @@ align-items: center;
   }
   .header-link{
     position: relative;
-  
   }
+
+  /* -------HER0------ */
+  .hero-title {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+  .hero-item {
+    max-width: 496px;
+    margin-bottom: 48px; 
+  }
+  .hero-title{
+    max-width: 1440px;
+     height:600px;
+     background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7) ), url(../images/bg.jpg);
 }
-/* .header {
-  padding: 24px 0;
-  border-bottom: 1px solid #e7e9fc;
-
-}
-
-
-.header-logo {
-  display: flex;
-  margin-right: 76px;
-
-  flex-direction: row;
-align-items: center;
-  font-family: "Raleway";
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.33;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  list-style: none;
-  text-decoration: none;
-  color: var(--dark);
-}
-
-.header-logo-web {
-  font-family: "Raleway";
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.33;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--primary-brand);
-}
-
-
-.header-container{
-  display: flex;
-  align-items: center;
-}
-
-.header-nav {
-display: flex;
-align-items: center;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-}
-
-.link {
-  text-decoration: none;
-  color: var(--dark);
-}
-
-.header-link:hover,
-.header-link:focus {
-  color: var(--primary-brand);
-}
-
-.header-list{
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  
-}
-.header-link{
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address {
-  margin-left: auto;
-  font-style: normal;
-  font-weight: 400;
-}
-
-.address-link:hover,
-.address-link:focus {
-  color: var(--primary-brand);
-
-}
-.address-list{
-display: flex;
-gap: 40px;
-}
-.address-link{
-  
-  align-items: center;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header-link{
-  position: relative;
-
-} */
-
-
-/* ------------------- */
-/* .active {
-  color: var(--button-active);
-	position: relative;
- }
-
-.active::after {
-	content: '';
-	position: absolute;
-  transform: translate(0, 100%);
-	left: 0; bottom: -28px;
-	width: 0;
-	height: 4px;
-  border-radius: 2px;
-	background-color: #404BBF;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), width 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
-}
-.active::after {
-	width: 100%;
-  transform: translate(0, 0);
-} */
-
-/* Hero */
-
-
-/* .hero-title {
-  background-color: var(--dark);
-  text-align: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
-  
-}
-.hero-title{
- max-width: 1440px;
-  height:600px;
-  margin-left: auto;
-  margin-right: auto;
-  
-  background-repeat: no-repeat;
-  background-position: center ;
-  background-size: cover;
-background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7) ), url(../images/bg.jpg);
-}
-
-.hero-item {
-  max-width: 496px;
-  text-align: center;
-  margin: 0 auto;
-  
-  margin-bottom: 48px;
-  
-  color: var(--white-texcolor);
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  
-}
-
-.button {
-  font-family: inherit;
-  color: var(--accent);
-  background-color: var(--primary-brand);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  border-radius: 4px;
-  box-shadow: 0px 4px rgba(0, 0, 0, 0.15);
-  border: none;
-  padding: 16px 32px 16px 32px;
-  display: inline;
-  min-width: 169px 56px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.button:hover,
-.button:focus {
-  color: var(--accent);
-  background-color: var(--button-active);
-}
-
-/* Section Principle */
-.principle {
+/* ----------PRINCPLE DESKTOP--------- */
+principle {
   padding: 120px 0;
-
 }
-
-
 .principle-title {
   margin-bottom: 8px;
   margin-top: 8px;
@@ -605,27 +643,17 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7) ),
   line-height: 1.2;
   letter-spacing: 0.02em;
   font-weight: 500;
-
-}
-
-.desc {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  
 }
 .principle-list{
   display: flex;
   gap: 24px;
-  
 }
 .principle-item{
   width: 264px;
-  
 }
-
-
+.desc{
+  margin-bottom: 0;
+}
 .principle-item::before{
 display: block;
 content: "";
@@ -635,27 +663,21 @@ background-size: 64px;
 background-repeat: no-repeat;
 background-position: center ;
 background-color:var(--light);
-
 }
 .principle-item.icon-antena::before{
 background-image: url(../images/antenna.svg);
-
 }
 .principle-item.icon-clock::before{
 background-image: url(../images/clock.svg);
 }
-
 .principle-item.icon-diagram::before{
 background-image: url(../images/diagram.svg);
 }
-
 .principle-item.icon-cosmos::before{
   background-image: url(../images/astronaut.svg)
-
-} */
-/* Section work  */
-
-/* .work-caption,
+}
+/*-------------SECTION WORK  desktop------- */
+.work-caption,
 .team-caption {
   text-align: center;
   margin-bottom: 72px;
@@ -664,7 +686,6 @@ background-image: url(../images/diagram.svg);
   line-height: 1.11;
   letter-spacing: 0.02em;
 }
-
 .work {
   padding-bottom: 120px;
 }
@@ -675,7 +696,17 @@ background-image: url(../images/diagram.svg);
 }
 .work-item{
   flex-basis: calc((100% - 48px) / 3);
-} */
+} 
+}
+
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+screen and (min-resolution: 192dpi) and (min-width: 1200px),
+screen and (min-resolution: 2dppx) and (min-width: 1200px){
+.hero-title{
+  background-image:linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7) ), url(../images/bg-desktop@2x.jpg);
+}
+}
 
 /* Section Our team */
 

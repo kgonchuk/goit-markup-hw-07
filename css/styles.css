@@ -90,15 +90,16 @@ a {
 }
 .container{
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+ padding: 0 15px;
+ margin: 0 auto;
 }
-@media screen and (min-width:480px) {
+@media screen and (min-width:428px) {
   .container{
     width: 428px; 
   } 
+  .mobile-menu-social{
+    gap: 64px;
+  }
 }
 
 @media screen and (min-width:768px) {
@@ -106,7 +107,7 @@ a {
     width:768px;
   } 
 }
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1158px) {
   .container{
     width: 1158px;
   } 
@@ -177,19 +178,35 @@ display: block;
   margin-bottom: 48px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.active {
+  color: var(--button-active);
+    position: relative;
+ }
+
+.active::after {
+    content: '';
+    position: absolute;
+  transform: translate(0, 100%);
+    left: 0; bottom: -10px;
+    width: 0;
+    height: 4px;
+  border-radius: 2px;
+    background-color: #404BBF;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), width 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+.active::after {
+    width: 50%;
+  transform: translate(0, 0);
+  
+}
 .mobile-icon{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border-color: transparent;
-  background-color: var(--primary-brand);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} 
+
 .mobile-menu-social{
   display: flex;
   align-items: center;
-  gap: 64px;
+  gap: 35px;
 }
 .mobile-menu-soclink{
   width: 40px;
@@ -197,7 +214,10 @@ display: block;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: var(--primary-brand);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu-contacts{
   margin-top: auto;
@@ -496,7 +516,7 @@ flex-basis: calc((100% - 72px) / 4);
 
 /* -----------FOOTER------ */
 .footer-container{
-  display: flex;
+  /* display: flex; */
 
   }
     .social-title{
@@ -513,6 +533,7 @@ flex-basis: calc((100% - 72px) / 4);
     display: flex;
     justify-content: center;
     gap: 12px;
+    margin-bottom: 72px;
     }
     
     .footer {
@@ -572,9 +593,11 @@ flex-basis: calc((100% - 72px) / 4);
       text-transform: uppercase;
       color: var(--primary-brand);
     }
-    
+    .footer-log-container{
+      margin-bottom: 72px;
+    }
     .footer-text {
-      margin: 0;
+      margin: 0 auto;
       text-align: left;
       color: var(--accent);
       width: 264px;
@@ -593,6 +616,7 @@ flex-basis: calc((100% - 72px) / 4);
       }
       
       .modal-footer-input {
+        margin-bottom: 16px;
         width: 264px;
         height: 40px;
         background-color: transparent;
@@ -617,11 +641,13 @@ flex-basis: calc((100% - 72px) / 4);
       }
       
       .modal-footer-wrap{
-        display: flex;
+        /* display: flex; */
         justify-content: center;
         gap: 24px;
       }
+     
       .modal-footer-btn {
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -673,8 +699,11 @@ pointer-events: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 392px;
-  height: 586px;
+  width: 95%;
+  max-width: 392px;
+  height: 95%;
+  max-height: 586px;
+  overflow: scroll;
   background-color: var(--white-texcolor);
 }
 .close-btn-modal{
@@ -976,18 +1005,19 @@ padding-right: 32px;
   display: none;
 }
 .footer-container{
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   flex-wrap: wrap;
   gap: 72px;
   }
   .social{
   margin-left: 0;
+  
   }
   
   .modal-footer-container,
   .social{
-    margin: 72px auto 0;
+    margin: 0 auto;
   }
   .footer-logo{
     justify-content: center;
@@ -996,7 +1026,7 @@ padding-right: 32px;
     flex-wrap: wrap;
   }
   .modal-footer-input{
-    width: 398px;
+    width: 100%;
   }
   .modal-footer-btn{
     width: 165px;
@@ -1043,7 +1073,6 @@ display: none;
     
   }
   
-  }
   .header-nav {
     display: flex;
     align-items: center;
@@ -1130,6 +1159,7 @@ display: none;
 
 .principle-container{
   width: 100%;
+
 }
 /* --------OUR TEAM TABLET------ */
 .team {
@@ -1158,10 +1188,10 @@ width: 264px;
 /* ---------FOOTER-TABLET------ */
 
 .modal-footer-container{
-  margin-left: 0;
+  /* margin-left: 0; */
 }
 .footer-log-container{
-  margin-right: 24px;
+  /* margin-right: 24px; */
 }
 /* -------MODL WINDOW-----TABLET */
 .modal{
@@ -1179,7 +1209,6 @@ width: 264px;
   margin-bottom: 64px;
 }
 /* ----PROJECT  CARD ---TABLET */
-
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),

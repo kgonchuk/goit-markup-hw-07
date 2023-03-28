@@ -314,7 +314,7 @@ align-items: center;
   max-width: 320px;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 72px;
+  margin-bottom: 40px;
   color: var(--white-texcolor);
   font-weight: 700;
   font-size: 36px;
@@ -381,7 +381,12 @@ screen and (min-resolution: 2dppx) and (min-width: 480px){
   margin-bottom: 72px;
 }
 .principle-list{
-  display: block;
+ 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 72px;
+  
 }
 .principle-item::before{
   display: block;
